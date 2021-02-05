@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="4dp">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="4dp"
+        app:cardCornerRadius="4dp"
+        app:cardElevation="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/video_picture"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginRight="16dp"
+                android:maxHeight="100dp"
+                android:scaleType="fitXY"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:srcCompat="@drawable/phillip_lackner" />
+
+            <TextView
+                android:id="@+id/video_name"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:fontFamily="sans-serif-condensed"
+                android:gravity="center"
+                android:text="Phillip Lanckner"
+                android:textColor="@color/black"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="@+id/video_picture"
+                app:layout_constraintStart_toStartOf="@+id/video_picture"
+                app:layout_constraintTop_toBottomOf="@+id/video_picture" />
+
+            <TextView
+                android:id="@+id/video_description"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:ellipsize="end"
+                android:fontFamily="sans-serif-condensed"
+                android:gravity="center"
+                android:maxLength="@android:integer/config_shortAnimTime"
+                android:text="On the one hand this channel will help beginners to learn the fundamentals of Android Development, but on the other hand I will also upload more advanced stuff. Since the development niche is evolving so fast, I will help you to keep track of it so you don't feel lost in the jungle of coding."
+                android:textColor="@color/black"
+                android:textColorHint="#FFFFFF"
+                android:textSize="14sp"
+                app:layout_constraintEnd_toEndOf="@+id/video_picture"
+                app:layout_constraintStart_toStartOf="@+id/video_picture"
+                app:layout_constraintTop_toBottomOf="@+id/video_name" />
+
+            <ImageView
+                android:id="@+id/like_pressed"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="16dp"
+                android:visibility="invisible"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="@+id/video_picture"
+                app:layout_constraintHorizontal_bias="0.35"
+                app:layout_constraintStart_toStartOf="@+id/video_picture"
+                app:layout_constraintTop_toBottomOf="@+id/video_description"
+                app:layout_constraintVertical_bias="0.0"
+                app:srcCompat="@drawable/liked_pressed" />
+
+            <ImageView
+                android:id="@+id/like"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="16dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="@+id/video_picture"
+                app:layout_constraintHorizontal_bias="0.35"
+                app:layout_constraintStart_toStartOf="@+id/video_picture"
+                app:layout_constraintTop_toBottomOf="@+id/video_description"
+                app:layout_constraintVertical_bias="0.0"
+                app:srcCompat="@drawable/like" />
+
+            <ImageView
+                android:id="@+id/dislike"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="16dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="@+id/video_picture"
+                app:layout_constraintHorizontal_bias="0.65"
+                app:layout_constraintStart_toStartOf="@+id/video_picture"
+                app:layout_constraintTop_toBottomOf="@+id/video_description"
+                app:layout_constraintVertical_bias="0.0"
+                app:srcCompat="@drawable/dislike" />
+
+            <ImageView
+                android:id="@+id/dislike_pressed"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="16dp"
+                android:visibility="invisible"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="@+id/video_picture"
+                app:layout_constraintHorizontal_bias="0.65"
+                app:layout_constraintStart_toStartOf="@+id/video_picture"
+                app:layout_constraintTop_toBottomOf="@+id/video_description"
+                app:layout_constraintVertical_bias="0.0"
+                app:srcCompat="@drawable/dislike_pressed" />
+
+            <ImageView
+                android:id="@+id/favourite"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="16dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="@+id/video_description"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintStart_toStartOf="@+id/video_picture"
+                app:layout_constraintTop_toBottomOf="@+id/video_description"
+                app:layout_constraintVertical_bias="0.0"
+                app:srcCompat="@drawable/favorite" />
+
+            <ImageView
+                android:id="@+id/favourite_pressed"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="16dp"
+                android:visibility="invisible"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="@+id/video_description"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintStart_toStartOf="@+id/video_picture"
+                app:layout_constraintTop_toBottomOf="@+id/video_description"
+                app:layout_constraintVertical_bias="0.0"
+                app:srcCompat="@drawable/favorite_pressed" />
+
+            <ImageView
+                android:id="@+id/play"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="16dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="@+id/video_picture"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="@+id/video_picture"
+                app:layout_constraintTop_toBottomOf="@+id/video_description"
+                app:layout_constraintVertical_bias="0.0"
+                app:srcCompat="@drawable/play" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
